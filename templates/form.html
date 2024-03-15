@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form action="/" method="post">
+        <label for="text">Enter text to analyze:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+    <div class="result">
+        <p>The sentiment of the text is: {{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
